@@ -1,5 +1,10 @@
 ## **Full-Stack Project README**
 
+## App Demo
+
+[Watch the StrongPass Generator Demo on YouTube](https://youtu.be/9lGFqyc9Uj4)
+
+
 ## Password Generator - Full Stack Application
 
 This is a **full-stack Password Generator app** with a React frontend and Spring Boot backend. Both services are Dockerized and can run together using Docker Compose.
