@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Password Generator - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the **React frontend** for the Password Generator application. It provides a user interface for generating strong passwords with customizable options.
 
-## Available Scripts
+## Features
+- Generate strong passwords with:
+  - Customizable number of words and letters
+  - Option to include numbers and symbols
+  - Capitalization styles
+- Responsive design
+- Dark/light theme toggle
+- Connects to backend API for password generation
+- Dockerized for easy deployment with Nginx
 
-In the project directory, you can run:
+## Demo
+Access the app locally: `http://localhost:3000`
 
-### `npm start`
+## Tech Stack
+- React 18
+- Material UI (MUI)
+- Axios for API calls
+- Docker + Nginx for production build
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
+- Node.js 20+
+- npm
+- Docker (optional for containerized deployment)
 
-### `npm test`
+### Installation
+```bash
+# Clone the repo
+git clone <frontend-repo-url>
+cd password_generator_frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Install dependencies
+npm install
 
-### `npm run build`
+# Run the app locally
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Build Docker image
+docker build -t frontend-password-generator .
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Run the container
+docker run -p 3000:80 frontend-password-generator
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# API Integration
 
-### `npm run eject`
+- Frontend communicates with the backend using the environment variable REACT_APP_API_URL. Update this value when running in Docker or production.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    Project Structure
+    src/
+    components/   # UI components (PasswordForm, ResultBox)
+    App.js        # Main App
+    api.js        # API calls
+    Dockerfile      # Docker build for frontend
+    nginx.conf      # Custom Nginx config
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
