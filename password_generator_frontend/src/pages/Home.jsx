@@ -212,7 +212,7 @@ export default function Home({ mode, toggleMode }) {
             <motion.img
               src={appIcon}
               alt="App Icon"
-              style={{ width: 80, height: 80 }}
+              style={{ width: 70, height: 70 }}
               animate={{ rotate: [0, 10, -10, 0] }} // subtle rotation animation
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />

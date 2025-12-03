@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  backend:
+    build:
+      context: ./passwordGenerator_backend 
+      dockerfile: Dockerfile
+    container_name: password-backend
+    ports:
+      - "9091:9091"
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./password_generator_frontend
+      dockerfile: Dockerfile
+    container_name: password-frontend
+    ports:
+      - "3000:80"
+    environment:
+      - REACT_APP_API_URL=http://backend:9091/api
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

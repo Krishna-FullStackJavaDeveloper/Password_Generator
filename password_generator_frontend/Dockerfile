@@ -1,5 +1,5 @@
 # Step 1: Use Node.js 20 LTS base image
-FROM node:20-alpine as build
+FROM node:20-alpine AS build
 
 # Step 2: Set working directory
 WORKDIR /app
@@ -23,7 +23,7 @@ FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 
 # Copy custom nginx config (optional)
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose port 80
 EXPOSE 80
