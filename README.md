@@ -36,7 +36,7 @@ cd passwordGenerator_backend
 mvn clean package
 java -jar target/password-generator.jar
 ````
-3. ** Run Frontend**
+3. **Run Frontend**
 ```bash
 cd password_generator_frontend
 npm install
